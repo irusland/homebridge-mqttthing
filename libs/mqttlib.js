@@ -170,6 +170,16 @@ var mqttlib = new function() {
             } ) );
         }
 
+        options = {
+            protocolId: 'MQTT',
+            protocolVersion: 4,
+            clean: true,
+            reconnectPeriod: 1000,
+            connectTimeout: 30000,
+            rejectUnauthorized: false,
+            clientId: clientId
+        };
+
         // create MQTT client
         var mqttClient = mqtt.connect(brokerUrl, options);
         mqttClient.on('error', function (err) {

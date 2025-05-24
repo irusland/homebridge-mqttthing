@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-mqttthing",
-  "version": "1.1.47",
-  "description": "Homebridge plugin supporting various services over MQTT",
+  "name": "@irusland/homebridge-mqttthing",
+  "version": "1.1.51",
+  "description": "Homebridge plugin supporting various services over MQTT (with TLS fixes)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arachnetech/homebridge-mqttthing.git"
+    "url": "git+https://github.com/irusland/homebridge-mqttthing.git"
   },
   "keywords": [
     "homebridge-plugin",
@@ -63,16 +63,16 @@
     "air purifier",
     "dehumidifier"
   ],
-  "author": "David Miller",
+  "author": "irusland",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/arachnetech/homebridge-mqttthing/issues"
+    "url": "https://github.com/irusland/homebridge-mqttthing/issues"
   },
-  "homepage": "https://github.com/arachnetech/homebridge-mqttthing#readme",
+  "homepage": "https://github.com/irusland/homebridge-mqttthing#readme",
   "dependencies": {
     "fakegato-history": "^0.6.2",
     "homebridge-lib": "^6.0.1",
     "jsonpath": "^1.1.1",
-    "mqtt": "^4.3.2"
+    "mqtt": "^4.3.8"
   }
 }

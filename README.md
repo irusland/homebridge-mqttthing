@@ -1,7 +1,34 @@
-[![npm](https://badgen.net/npm/v/homebridge-mqttthing/latest)](https://www.npmjs.com/package/homebridge-mqttthing)
-[![npm](https://badgen.net/npm/dt/homebridge-mqttthing)](https://www.npmjs.com/package/homebridge-mqttthing)
+[![npm](https://badgen.net/npm/v/@irusland/homebridge-mqttthing/latest)](https://www.npmjs.com/package/@irusland/homebridge-mqttthing)
+[![npm](https://badgen.net/npm/dt/@irusland/homebridge-mqttthing)](https://www.npmjs.com/package/@irusland/homebridge-mqttthing)
 [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.gg/MTpeMC)
 [![verified-by-homebridge](https://badgen.net/badge/homebridge/verified/purple)](https://github.com/homebridge/homebridge/wiki/Verified-Plugins)
+
+# Homebridge MQTT-Thing (TLS Fixed Version)
+This is a fork of [Homebridge MQTT-Thing](https://www.npmjs.com/package/homebridge-mqttthing) with fixes for TLS configuration. The main changes are:
+
+- Fixed TLS configuration to properly use top-level MQTT options
+- Improved support for secure MQTT connections (mqtts://)
+- Better handling of certificates and keys
+
+## TLS Configuration Example
+```json
+{
+  "accessory": "mqttthing",
+  "type": "lightbulb",
+  "name": "My Device",
+  "url": "mqtts://your-broker:8883",
+  "username": "your-username",
+  "password": "your-password",
+  "protocolId": "MQIsdp",
+  "protocolVersion": 3,
+  "rejectUnauthorized": false,
+  "topics": {
+    "setOn": "device/request"
+  }
+}
+```
+
+Note: MQTT options are now specified at the top level of the configuration, not inside an `mqttOptions` object.
 
 # Homebridge MQTT-Thing
 [Homebridge MQTT-Thing](https://www.npmjs.com/package/homebridge-mqttthing) is a plugin for [Homebridge](https://github.com/homebridge/homebridge) allowing the integration of [many different accessory types](#supported-accessories) using MQTT.
