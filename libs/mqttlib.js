@@ -106,7 +106,7 @@ var mqttlib = new function() {
         }
 
         // start with any configured options object
-        var options = config.mqttOptions || {};
+        var options = config || {};
 
         // standard options set by mqtt-thing
         var myOptions = {
